@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <title>Pizzeria</title>
+    <script type="text/javascript" th:inline="javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<style>
+    .my-container{
+        padding: 120px 25%;
+    }
+    .card-container{
+        width: 100%;
+    }
+
+    .add-button{
+        width: 100%;
+        height: 40px;
+        margin-bottom: 30px;
+    }
+    .navbar{
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        z-index: 1;
+    }
+</style>
+<nav th:if="${user}" class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">Pizzeria</a>
+        <form class="d-flex">
+            <a th:if="${userRole == 'ADMIN'}"  th:href='${"/orders"}' style="padding-right: 20px;">
+                <button type="button" class="btn btn-outline-primary">To order list</button>
+            </a>
+            <a th:if="${user}" th:href="@{/logout}">
+                <button type="button" class="btn btn-outline-secondary">Sign out</button>
+            </a>
+        </form>
+    </div>
+</nav>
+<div class="my-container">
+    <div th:unless="${user}" class="container">
+        <h1 class="display-1" style="text-align: center; margin-bottom: 40px;">Pizzeria</h1>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a th:href="@{/login}">
+                <button type="button" class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 30px;">Sign in</button>
+            </a>
+
+            <a href="/registration" id="reg">
+                <button type="button" class="btn btn-outline-secondary btn-lg" style="width: 100%;">Sign up</button>
+            </a>
+        </div>
+    </div>
+
+    <a th:if="${userRole == 'ADMIN'}"  th:href='${"/ingredients/add"}'>
+        <button class="btn btn-primary add-button" type="button">Add new ingredient</button>
+    </a>
+
+    <div class="card-container">
+        <div class="card mb-3" style="max-width: 100%;" th:id="${ingredient.getId()}" th:each="ingredient: ${ingredients}">
+            <div class="row g-0" style="align-items: center;">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${ingredient.getName().toUpperCase()}"></h5>
+                        <p class="card-text" th:text="'Price: ' + ${ingredient.getPrice()}"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button th:if="${userRole == 'USER'}" type="button" class="btn btn-primary choose-btn" th:id="${ingredient.getId()}" th:attr="data-ingredient-id=${ingredient.getId()}, data-ingredient-cost=${ingredient.getPrice()}" style="width: 135px">Add</button>
+                    <a th:if="${userRole == 'ADMIN'}"  th:href='${"/ingredients/change/" + ingredient.getId()}' style="padding-right: 20px">
+                        <button type="button" class="btn btn-outline-primary">Change</button>
+                    </a>
+                    <a th:if="${userRole == 'ADMIN'}"  th:href='${"/ingredients/delete/" + ingredient.getId()}'>
+                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="user-notification">
+
+    </div>
+
+    <form th:if="${userRole == 'USER'}" name="orderForm" style="width: 100%">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" th:required="required">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" th:required="required">
+        </div>
+        <div class="mb-3 form-check">
+            <div class="form-check-label total-cost"></div>
+        </div>
+        <button class="btn btn-primary send-btn">Send order</button>
+    </form>
+</div>
+
+<script>
+    let ingredients = [];
+    let totalCost = 0;
+
+    $(".total-cost").innerHTML="";
+    let totalCostEl = document.createElement("p");
+    totalCostEl.innerText = `Total Cost: ${totalCost}`;
+    totalCostEl.classList.add("total-cost__label");
+    $(".total-cost").append(totalCostEl);
+
+    $(".choose-btn").click((e) => {
+        e.preventDefault();
+        let btn = $(e.currentTarget);
+        let ingredientId = btn.attr("data-ingredient-id");
+        ingredients.push(ingredientId);
+        let ingredientCost = btn.attr("data-ingredient-cost");
+        totalCost = totalCost + Number.parseInt(ingredientCost)
+        totalCostEl.innerText = `Total Cost: ${totalCost}`;
+    });
+
+    $(".send-btn").click((e) => {
+        e.preventDefault();
+        let form = document.forms.orderForm;
+        const ingredientsString = ingredients.join(' ');
+        let notification = document.createElement("div");
+        notification.classList.add("alert");
+        notification.classList.add("alert-info");
+        notification.innerHTML="Order is send!"
+        $(".user-notification").append(notification)
+        $.post("/orders/add", {
+            name: form.elements.name.value,
+            phone: form.elements.phone.value,
+            cost: totalCost,
+            ingredients: ingredientsString
+        });
+        // window.location.href = "/";
+    });
+</script>
+</body>
+</html>

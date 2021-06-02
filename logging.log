@@ -1,0 +1,26 @@
+2021-06-02 23:33:58.726  INFO 87727 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Starting PizzeriataskmainApplication using Java 11.0.11 on grin-pc with PID 87727 (/home/grin/IdeaProjects/pizzeriataskmain/target/classes started by grin in /home/grin/IdeaProjects/pizzeriataskmain)
+2021-06-02 23:33:58.737  INFO 87727 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : No active profile set, falling back to default profiles: default
+2021-06-02 23:33:58.892  INFO 87727 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-02 23:33:58.894  INFO 87727 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-02 23:34:00.055  INFO 87727 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-02 23:34:00.068  INFO 87727 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2021-06-02 23:34:00.385  INFO 87727 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1e1aff1d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-02 23:34:00.445  INFO 87727 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-06-02 23:34:00.734  INFO 87727 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-02 23:34:00.744  INFO 87727 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-02 23:34:00.744  INFO 87727 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-02 23:34:00.805  INFO 87727 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-02 23:34:00.806  INFO 87727 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1909 ms
+2021-06-02 23:34:01.521  INFO 87727 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e83b1cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@61289e7, org.springframework.security.web.header.HeaderWriterFilter@60fdfe76, org.springframework.security.web.authentication.logout.LogoutFilter@7b00d0d0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@173a9ca9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51c8d56d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63345834, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a8d1179, org.springframework.security.web.session.SessionManagementFilter@5168b19, org.springframework.security.web.access.ExceptionTranslationFilter@48edad9c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2076d302]
+2021-06-02 23:34:01.739  INFO 87727 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-02 23:34:01.948  INFO 87727 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-02 23:34:01.984  INFO 87727 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-02 23:34:02.118  INFO 87727 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-02 23:34:02.168  INFO 87727 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-02 23:34:02.187  INFO 87727 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Started PizzeriataskmainApplication in 4.473 seconds (JVM running for 6.428)
+2021-06-02 23:34:18.849  INFO 87727 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-02 23:34:18.850  INFO 87727 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-02 23:34:18.852  INFO 87727 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-06-02 23:34:18.900  INFO 87727 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Главная страница
+2021-06-02 23:34:18.928  INFO 87727 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-02 23:37:06.075  INFO 87727 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Страница регистрации

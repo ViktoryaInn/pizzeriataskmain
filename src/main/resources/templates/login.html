@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <title>Pizzeria</title>
+</head>
+<body>
+<div class="container" style="max-width: 720px; margin-top: 10%">
+    <div class="alert alert-danger" role="alert" th:if="${param.error}">
+        Wrong login or password
+    </div>
+    <div class="card">
+        <form class="card-body" th:action="@{/login}" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">Login</label>
+                <input type="text" class="form-control" id="username" name="username"  th:required="required">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password"  th:required="required">
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-right: 10px;">Sign in</button>
+            <a href="/registration" id="reg">
+                <button type="button" class="btn btn-outline-secondary">Sign up</button>
+            </a>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <title>Pizzeria</title>
+  <script type="text/javascript" th:inline="javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<style>
+  .navbar{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+  }
+</style>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">Pizzeria</a>
+    <form class="d-flex">
+      <a th:href='${"/orders"}' style="padding-right: 20px;">
+        <button type="button" class="btn btn-outline-primary">To order list</button>
+      </a>
+      <a th:href="@{/logout}">
+        <button type="button" class="btn btn-outline-secondary">Sign out</button>
+      </a>
+    </form>
+  </div>
+</nav>
+
+<div class="container" style="max-width: 720px; padding-top: 10%">
+  <div class="card">
+    <form th:action='${"/ingredients/change/" + ingredient.getId()}' method="post"  name="ingredientForm" class="card-body">
+      <div class="mb-3">
+        <label for="name" class="form-label">Ingredient name</label>
+        <input type="text" class="form-control" id="name" name="name" th:value="${ingredient.getName()}"  th:required="required">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Ingredient price</label>
+        <input type="number" class="form-control" id="price" name="price" th:value="${ingredient.getPrice()}"  th:required="required">
+      </div>
+      <button type="submit" id="submit" class="btn btn-primary">Change ingredient</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <title>Pizzeria</title>
+  <script type="text/javascript" th:inline="javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<style>
+  .my-container{
+    padding: 120px 200px;
+  }
+  .my-container__title{
+    margin-bottom: 30px;
+  }
+  .navbar{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .row-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 -35px;
+  }
+  .col{
+    max-width: 380px;
+    flex-basis: unset;
+    flex-grow: unset;
+  }
+</style>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a href="/" class="navbar-brand">Pizzeria</a>
+    <form class="d-flex">
+      <a th:href="@{/logout}">
+        <button type="button" class="btn btn-outline-secondary">Sign out</button>
+      </a>
+    </form>
+  </div>
+</nav>
+
+<div class="my-container">
+  <h3 class="my-container__title">List of orders</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row-wrap">
+      <div class="col" th:each="order: ${orders}">
+        <div class="card" style="margin-top: 30px;">
+          <div class="card-body">
+            <h4 class="card-title">New order!</h4>
+            <p class="card-text">
+              <b>Client name: </b>
+              <span th:text="${order.getClientName()}"></span>
+            </p>
+            <p class="card-text">
+              <b>Client phone: </b>
+              <span th:text="${order.getClientPhone()}"></span>
+            </p>
+            <p class="card-text">
+              <b>Order cost: </b>
+              <span th:text="${order.getCost()}"></span>
+            </p>
+            <p><b>Ingredients:</b></p>
+            <ul>
+              <li th:each="ingredient: ${order.ingredients}" th:text="${ingredient.getName()} + ' - ' + ${ingredient.getPrice()}"></li>
+            </ul>
+            <p class="card-text"><small class="text-muted" th:text="${order.getDate()}"></small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
