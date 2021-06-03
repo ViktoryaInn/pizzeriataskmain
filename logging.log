@@ -2800,3 +2800,109 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [order
 2021-06-03 06:35:53.446  INFO 110777 --- [http-nio-8080-exec-6] c.e.p.controller.ShowController          : Страница изменения ингредиентов
 2021-06-03 06:35:55.736  INFO 110777 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Главная страница
 2021-06-03 06:35:55.744  INFO 110777 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 08:08:10.736  INFO 117507 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Starting PizzeriataskmainApplication using Java 11.0.11 on grin-pc with PID 117507 (/home/grin/IdeaProjects/pizzeriataskmain/target/classes started by grin in /home/grin/IdeaProjects/pizzeriataskmain)
+2021-06-03 08:08:10.741  INFO 117507 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : No active profile set, falling back to default profiles: default
+2021-06-03 08:08:10.866  INFO 117507 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-03 08:08:10.867  INFO 117507 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-03 08:08:11.038  WARN 117507 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-03 08:08:11.850  INFO 117507 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-03 08:08:11.869  INFO 117507 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2021-06-03 08:08:12.275  INFO 117507 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$aa0b5cfd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-03 08:08:12.356  INFO 117507 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-06-03 08:08:12.819  INFO 117507 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-03 08:08:12.830  INFO 117507 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-03 08:08:12.830  INFO 117507 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-03 08:08:12.904  INFO 117507 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-03 08:08:12.905  INFO 117507 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2035 ms
+2021-06-03 08:08:14.272  INFO 117507 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@374f814, org.springframework.security.web.context.SecurityContextPersistenceFilter@3665c70e, org.springframework.security.web.header.HeaderWriterFilter@4da18b7b, org.springframework.security.web.authentication.logout.LogoutFilter@39808486, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41d0fcf7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14c27254, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6af529c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44257ca2, org.springframework.security.web.session.SessionManagementFilter@51c40e9a, org.springframework.security.web.access.ExceptionTranslationFilter@4b0d66b5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@515c0f62]
+2021-06-03 08:08:14.537  INFO 117507 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-03 08:08:14.773  INFO 117507 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-03 08:08:14.821  WARN 117507 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+2021-06-03 08:08:14.831  INFO 117507 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-06-03 08:08:14.849  INFO 117507 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-06-03 08:08:14.877 ERROR 117507 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.7.jar:5.3.7]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.7.jar:5.3.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:438) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:337) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1336) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1325) ~[spring-boot-2.5.0.jar:2.5.0]
+	at com.example.pizzeriataskmain.PizzeriataskmainApplication.main(PizzeriataskmainApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.0.jar:2.5.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:229) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:43) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.7.jar:5.3.7]
+	... 19 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:243) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:282) ~[spring-boot-2.5.0.jar:2.5.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:213) ~[spring-boot-2.5.0.jar:2.5.0]
+	... 21 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1075) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:239) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	... 23 common frames omitted
+Caused by: java.net.BindException: Адрес уже используется
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:455) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:447) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:300) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:253) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1204) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1290) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:614) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1072) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	... 25 common frames omitted
+
+2021-06-03 08:09:10.881  INFO 117713 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Starting PizzeriataskmainApplication using Java 11.0.11 on grin-pc with PID 117713 (/home/grin/IdeaProjects/pizzeriataskmain/target/classes started by grin in /home/grin/IdeaProjects/pizzeriataskmain)
+2021-06-03 08:09:10.885  INFO 117713 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : No active profile set, falling back to default profiles: default
+2021-06-03 08:09:11.024  INFO 117713 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-03 08:09:11.024  INFO 117713 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-03 08:09:11.110  WARN 117713 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-03 08:09:11.917  INFO 117713 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-03 08:09:11.939  INFO 117713 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2021-06-03 08:09:12.304  INFO 117713 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1fb0e1e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-03 08:09:12.366  INFO 117713 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-06-03 08:09:12.707  INFO 117713 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-03 08:09:12.722  INFO 117713 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-03 08:09:12.723  INFO 117713 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-03 08:09:12.783  INFO 117713 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-03 08:09:12.783  INFO 117713 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1757 ms
+2021-06-03 08:09:13.834  INFO 117713 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e38a06d, org.springframework.security.web.context.SecurityContextPersistenceFilter@50b2e78d, org.springframework.security.web.header.HeaderWriterFilter@4fea0c04, org.springframework.security.web.authentication.logout.LogoutFilter@7fd8419, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@614a1727, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51115b01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12787010, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77c8dfa6, org.springframework.security.web.session.SessionManagementFilter@2eec293d, org.springframework.security.web.access.ExceptionTranslationFilter@3a8f2767, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@407b2d4d]
+2021-06-03 08:09:14.056  INFO 117713 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-03 08:09:14.248  INFO 117713 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-03 08:09:14.296  INFO 117713 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-03 08:09:14.312  INFO 117713 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Started PizzeriataskmainApplication in 4.21 seconds (JVM running for 5.984)
+2021-06-03 08:09:14.314  INFO 117713 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-03 08:09:14.317  INFO 117713 --- [restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-03 08:09:40.682  INFO 117713 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-03 08:09:40.683  INFO 117713 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-03 08:09:40.684  INFO 117713 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-03 08:09:40.730  INFO 117713 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 08:10:44.360  INFO 117713 --- [http-nio-8080-exec-5] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 08:20:23.477  INFO 117713 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 08:20:32.320  INFO 117713 --- [http-nio-8080-exec-10] c.e.p.controller.ShowController          : Страница изменения ингредиентов
+2021-06-03 08:20:39.797  INFO 117713 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 08:20:39.807  INFO 117713 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 08:20:42.100  INFO 117713 --- [http-nio-8080-exec-2] c.e.p.controller.ShowController          : Страница изменения ингредиентов
+2021-06-03 08:20:44.230  INFO 117713 --- [http-nio-8080-exec-3] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 08:20:44.234  INFO 117713 --- [http-nio-8080-exec-3] c.e.p.controller.ShowController          : Выведены все ингредиенты
