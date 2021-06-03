@@ -2655,3 +2655,73 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [order
 2021-06-03 04:44:03.755  INFO 105116 --- [http-nio-8080-exec-4] c.e.p.controller.ShowController          : Выведены все ингредиенты
 2021-06-03 04:44:05.970  INFO 105116 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Страница заказов
 2021-06-03 04:44:06.131  INFO 105116 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Выведены все заказы
+2021-06-03 05:35:41.239  INFO 107562 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Starting PizzeriataskmainApplication using Java 11.0.11 on grin-pc with PID 107562 (/home/grin/IdeaProjects/pizzeriataskmain/target/classes started by grin in /home/grin/IdeaProjects/pizzeriataskmain)
+2021-06-03 05:35:41.248  INFO 107562 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : No active profile set, falling back to default profiles: default
+2021-06-03 05:35:41.354  INFO 107562 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-03 05:35:41.355  INFO 107562 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-03 05:35:42.543  INFO 107562 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-03 05:35:42.557  INFO 107562 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JDBC repository interfaces.
+2021-06-03 05:35:42.871  INFO 107562 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$253fe603] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-03 05:35:42.958  INFO 107562 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-06-03 05:35:43.364  INFO 107562 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-03 05:35:43.393  INFO 107562 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-03 05:35:43.393  INFO 107562 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-03 05:35:43.460  INFO 107562 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-03 05:35:43.461  INFO 107562 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2104 ms
+2021-06-03 05:35:44.381  INFO 107562 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bec606f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3af9f5aa, org.springframework.security.web.header.HeaderWriterFilter@4f2514d1, org.springframework.security.web.authentication.logout.LogoutFilter@1af5bdd8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@674b3741, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@184d9905, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b7acb3c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c4e9ba3, org.springframework.security.web.session.SessionManagementFilter@33a04b19, org.springframework.security.web.access.ExceptionTranslationFilter@54236c9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23de7a7b]
+2021-06-03 05:35:44.609  INFO 107562 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-03 05:35:44.897  INFO 107562 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-03 05:35:44.937  INFO 107562 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-03 05:35:45.084  INFO 107562 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-03 05:35:45.138  INFO 107562 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-03 05:35:45.156  INFO 107562 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Started PizzeriataskmainApplication in 4.786 seconds (JVM running for 6.891)
+2021-06-03 05:36:12.380  INFO 107562 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-03 05:36:12.380  INFO 107562 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-03 05:36:12.382  INFO 107562 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-03 05:36:12.429  INFO 107562 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:36:21.982  INFO 107562 --- [http-nio-8080-exec-6] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:36:21.990  INFO 107562 --- [http-nio-8080-exec-6] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:36:26.825  INFO 107562 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Страница заказов
+2021-06-03 05:36:27.069  INFO 107562 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Выведены все заказы
+2021-06-03 05:36:29.677  INFO 107562 --- [http-nio-8080-exec-9] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:36:29.691  INFO 107562 --- [http-nio-8080-exec-9] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:36:31.165  INFO 107562 --- [http-nio-8080-exec-10] c.e.p.controller.ShowController          : Страница добавления ингредиентов
+2021-06-03 05:36:33.942  INFO 107562 --- [http-nio-8080-exec-3] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:36:33.945  INFO 107562 --- [http-nio-8080-exec-3] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:36:35.557  INFO 107562 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Страница изменения ингредиентов
+2021-06-03 05:36:38.514  INFO 107562 --- [http-nio-8080-exec-4] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:36:38.524  INFO 107562 --- [http-nio-8080-exec-4] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:38:48.521  INFO 107827 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Starting PizzeriataskmainApplication using Java 11.0.11 on grin-pc with PID 107827 (/home/grin/IdeaProjects/pizzeriataskmain/target/classes started by grin in /home/grin/IdeaProjects/pizzeriataskmain)
+2021-06-03 05:38:48.527  INFO 107827 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : No active profile set, falling back to default profiles: default
+2021-06-03 05:38:48.610  INFO 107827 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-03 05:38:48.611  INFO 107827 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-06-03 05:38:49.438  INFO 107827 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-06-03 05:38:49.451  INFO 107827 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2021-06-03 05:38:49.780  INFO 107827 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$8efa3531] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-03 05:38:49.844  INFO 107827 --- [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2021-06-03 05:38:50.142  INFO 107827 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-06-03 05:38:50.151  INFO 107827 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-03 05:38:50.151  INFO 107827 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-03 05:38:50.211  INFO 107827 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-03 05:38:50.211  INFO 107827 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1599 ms
+2021-06-03 05:38:50.929  INFO 107827 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18059c13, org.springframework.security.web.context.SecurityContextPersistenceFilter@2efd6752, org.springframework.security.web.header.HeaderWriterFilter@7b5e9a06, org.springframework.security.web.authentication.logout.LogoutFilter@58ed07e1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@c4d61a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1884b95b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40a3f7f4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63764ed2, org.springframework.security.web.session.SessionManagementFilter@5c6de110, org.springframework.security.web.access.ExceptionTranslationFilter@3e77b14e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f443bec]
+2021-06-03 05:38:51.134  INFO 107827 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-03 05:38:51.367  INFO 107827 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-06-03 05:38:51.403  INFO 107827 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-06-03 05:38:51.501  INFO 107827 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-06-03 05:38:51.559  INFO 107827 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-06-03 05:38:51.577  INFO 107827 --- [restartedMain] c.e.p.PizzeriataskmainApplication        : Started PizzeriataskmainApplication in 4.279 seconds (JVM running for 6.58)
+2021-06-03 05:38:56.281  INFO 107827 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-03 05:38:56.286  INFO 107827 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-03 05:38:56.287  INFO 107827 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-03 05:38:56.353  INFO 107827 --- [http-nio-8080-exec-1] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:39:06.086  INFO 107827 --- [http-nio-8080-exec-4] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:39:06.091  INFO 107827 --- [http-nio-8080-exec-4] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:39:08.873  INFO 107827 --- [http-nio-8080-exec-5] c.e.p.controller.ShowController          : Страница добавления ингредиентов
+2021-06-03 05:39:10.968  INFO 107827 --- [http-nio-8080-exec-6] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:39:10.984  INFO 107827 --- [http-nio-8080-exec-6] c.e.p.controller.ShowController          : Выведены все ингредиенты
+2021-06-03 05:39:12.786  INFO 107827 --- [http-nio-8080-exec-7] c.e.p.controller.ShowController          : Страница изменения ингредиентов
+2021-06-03 05:39:14.554  INFO 107827 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Страница заказов
+2021-06-03 05:39:14.696  INFO 107827 --- [http-nio-8080-exec-8] c.e.p.controller.ShowController          : Выведены все заказы
+2021-06-03 05:39:17.667  INFO 107827 --- [http-nio-8080-exec-9] c.e.p.controller.ShowController          : Главная страница
+2021-06-03 05:39:17.675  INFO 107827 --- [http-nio-8080-exec-9] c.e.p.controller.ShowController          : Выведены все ингредиенты
